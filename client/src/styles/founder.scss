@@ -1,0 +1,41 @@
+@import './colors';
+
+.founder{
+    > div{
+        min-height: 400px;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        >img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        >h3{
+            font-size: 2rem;
+        }
+        >p{
+            font-size: 1rem;
+            line-height: 150%;
+            max-width: 600px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .founder > div{
+        padding: 1rem;
+        >img{
+            width: 150px;
+            height: 150px;
+        }
+        >h3{
+            font-size: 1.7rem;
+        }
+    }
+}

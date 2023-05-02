@@ -1,0 +1,80 @@
+@import './colors';
+
+.orderDetails{
+    min-height: 100vh;
+    background: $pink;
+    padding: 2rem;
+
+    >main {
+        height: fit-content;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: #fff;
+        overflow: auto;
+
+        > h1{
+            text-transform:  uppercase;
+            text-align: center;
+            font-weight: 300;
+            font-size: 2rem;
+            margin: 2rem;
+        }
+
+        > div {
+            margin: 0 2rem;
+            text-align: center;
+            >h1{
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+            >p{
+                font-weight: 200;
+                white-space: nowrap;
+                letter-spacing: 2px;
+                margin: 2rem;
+                >b{
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        > article{
+            >h1{
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                margin: 2rem 0;
+            }
+            >div{
+                background: rgb(246, 246, 246);
+                margin: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                border-radius: 3px;
+
+                >h4{
+                    font-weight: 200;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px){
+    .orderDetails > main > div{
+        > h1{
+            font-size: 1.4rem;
+        }
+        > p{
+            letter-spacing: 1px;
+            font-size: .9rem;
+            margin: 2rem 0;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@import './colors';
+
+.about{
+    background: $pink;
+    padding: 2rem;
+    main{
+        max-width: 900px;
+        background: #fff;
+        min-height: 100vh;
+        margin: auto;
+        padding: 2rem;
+
+        > h1{
+            font-weight: 500;
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            background: $dark;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        >article{
+            margin: 2rem 0;
+            > h4{
+                font-weight: 100;
+                font-size: 2rem;
+                text-align: center;
+                padding: 2rem 0;
+
+            }
+
+            > p{
+                letter-spacing: 1px;
+                word-spacing: 2px;
+                line-height: 2rem;
+                width: 50%;
+                text-align: center;
+                margin: 2rem auto;
+            }
+
+            >a{
+                background: $dark;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                color: #fff;
+                font-size: 1.5rem;
+                margin: auto;
+                &:hover{
+                    color: $red;
+                }
+            }
+        }
+
+        >div{
+            background: $dark;
+            border-radius: 3px;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+            > div{
+                > img{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                }
+                >h2{
+                    margin: 1rem 0;
+                }
+            }
+
+            >p{
+                width: 50%;
+                letter-spacing: 2px;
+                line-height: 150%;
+                margin: auto;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .about{
+        > main{
+            h1{
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            >article > p{
+                width: 100%;
+            }
+
+            >div > p{
+                width: 100%;
+            }
+        }
+    }
+}

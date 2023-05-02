@@ -1,0 +1,75 @@
+@import './colors';
+
+.home{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $red;
+    padding: 0 8rem;
+    .text{
+        color: #fff;
+        >h1{
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        >p{
+            font-size: 1.2rem;
+            opacity: .7;
+            margin-bottom: 2.5rem;
+        }
+        >a{
+            color: $red;
+            background: #fff;
+            width: 4rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+    .img{
+        img{
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .home{
+        min-height: 100vh;
+        padding: 1rem;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-start;
+        height: 600px;
+        .text{
+            margin: 0 .5rem;
+            padding-bottom: 50px;
+            > h1{
+                font-size: 3.5rem;
+            }
+            
+        }
+        .img{
+            img{
+                width: 350px;
+            }
+        }
+        
+    }
+}
+
+@media  (max-width: 600px) {
+    .home{
+        justify-content: center;
+        gap: 30px;
+        .text{
+            >h1{
+                font-size: 3rem;
+            }
+        }
+    }
+}

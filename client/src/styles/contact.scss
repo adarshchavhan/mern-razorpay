@@ -1,0 +1,96 @@
+@import './colors';
+
+.contact{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $pink;
+    
+    > form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        padding: 2rem;
+        width: 40%;
+        height: 80vh;
+        position: relative;
+        > h2{
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin: 2rem 0;
+
+        }
+        > input, textarea, button{
+            padding: 1rem;
+            border: 1px solid rgba(202,202,202);
+            margin: .5rem;
+            width: 80%;
+            border-radius: 3px;
+            font-size: .85rem;
+        }
+
+        > button{
+            background: $red;
+            color: #fff;
+            font-size: 1rem;
+            &:hover{
+                background: $redDark;
+            }
+        }
+
+        &::before{
+            content: '';
+            width: 100px;
+        height: 100%;
+        background: #fff;
+        border-radius: 0 100px 100px 0;
+        position: absolute;
+        top: 0;
+        right: -100px;
+        }
+        &::after{
+            content: '';
+            width: 140px;
+            height: 100%;
+            background: url('../assets/home-burger.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            background-position: center;
+            right: -170px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
+
+
+@media (max-width: 1200px){
+    .contact > form{
+        > input, 
+        textarea, 
+        button{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .contact{
+        padding: 0;
+        display: block;
+        > form{
+            width: 100%;
+            height: 100%;
+            &::before{
+                display: none;
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+}

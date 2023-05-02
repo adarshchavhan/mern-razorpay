@@ -1,0 +1,77 @@
+@import './colors';
+
+.profile{
+    min-height: 100vh;
+    background: $pink;
+    padding: 2rem;
+
+    >main {
+        height: fit-content;
+        margin: auto;
+        max-width: 600px;
+        padding: 4rem 2rem;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > img{
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow:  0 0 10px rgba(0,0,0,.146);
+        }
+        >h5{
+            font-size: 2rem;
+        }
+        >div{
+            margin: 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            
+            >div{
+                width: fit-content;
+                >a{
+                    background: $red;
+                    color: #fff;
+                    padding: 0.5rem 1rem;
+                    border-radius: 3px;
+                    font-size: 1rem;
+                    display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    &:hover{
+                        background: $redDark;
+                    }
+                }
+                &:first-child{
+                    > a{
+                        background: transparent;
+                        color: $red;
+                        border: 1px solid $red;
+                        
+                        &:hover{
+                            background: $redDark;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            
+        }
+        >button{
+            background: $dark;
+            color: #fff;
+            border: 1px solid $dark;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            font-size: 1rem;
+            &:hover{
+                background: $redDark;
+                color: #fff;
+            }
+        }
+    }
+}

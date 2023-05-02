@@ -1,0 +1,82 @@
+@import './colors';
+
+.tableClass {
+    min-height: 100vh;
+    background: $pink;
+    padding: 2rem;
+
+    main {
+        min-height: 100vh;
+        height: fit-content;
+        max-width: 900px;
+        background: #fff;
+        margin: auto;
+        overflow: auto;
+        border-radius: 3px;
+        padding: 2rem;
+
+        >table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+
+            tr {
+                background: whitesmoke; 
+
+                th,
+                td {
+                    padding: 1rem;
+                    white-space: nowrap;
+                }
+
+                th {
+                    background: $dark;
+                    color: #fff;
+
+                    &:first-child {
+                        border-radius: 5px 0 0 0;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 5px 0 0;
+                    }
+                }
+
+                td {
+                    color: $lightDark;
+
+                    >a {
+                        color: $red;
+                    }
+
+                    >button {
+                        margin: .25rem;
+                        color: $red;
+                        background: transparent;
+                    }
+
+                    >img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                &:last-child {
+                    td:first-child {
+                        border-radius: 0 0 0 5px;
+                    }
+
+                    td:last-child {
+                        border-radius: 0 0 5px 0;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import './colors';
+
+nav{
+    height: 5rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.229);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .logo{
+        >div svg{
+            font-size: 3rem;
+            color: $red;
+        }
+    }
+
+    > div{
+        display: flex;
+        align-items: center;
+        
+
+        > a{
+            margin: 0 2rem;
+            color: $dark;
+            transition: color .3s;
+            &:hover{
+                color: $lightDark;
+            }       
+
+            > svg{
+                color: $red;
+                font-size: 1.5rem;
+                transform: inherit;
+                &:hover{
+                    color: $lightDark;
+                } 
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    nav{
+        padding: 1rem;
+        > div > a{
+            margin: 0 .5rem;
+        }
+    }
+}

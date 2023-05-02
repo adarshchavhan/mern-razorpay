@@ -1,0 +1,37 @@
+@import './colors';
+
+.login{
+    background: $pink;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        height: 40px;
+        border: 2px solid $red;
+        padding-right: 20px;
+        width: fit-content;
+        background: $red;
+        color: #fff;
+        border-radius:10px;
+        font-size: 1rem;
+        box-shadow: 0 2px 15px rgba(0,0,0,.06);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+        top: 0;
+        transition: .2s ease-in-out;
+        overflow: hidden;
+        svg{
+            font-size: 2.5rem;
+            background: $redDark;
+            padding: 10px;
+        }
+        &:hover{
+            top: -3px;
+        }
+    }
+}

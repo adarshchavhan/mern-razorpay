@@ -1,0 +1,77 @@
+@import './colors';
+
+.menu{
+    min-height: 100vh;
+    padding: 4rem;
+    >hr{
+        border: 0;
+        height: 1px;
+        background: rgba(0,0,0,.1);
+    }
+    >h1{
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem;
+    }
+    >div{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+}
+
+.menuCard{
+    background: #fff;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.495);
+    > div{
+        border-radius: 10px 10px 0 0;
+        background: $red;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        height: 4rem;
+    }
+    > main{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > img{
+            height: 15rem;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        >h5{
+            font-size: 1.8rem;
+        }
+        >p{
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 1rem 0;
+        }
+
+        >button{
+            background: $red;
+            color: #fff;
+            padding: 1rem 2rem;
+            width: 100%;
+            border-radius: 10px;
+            &:hover{
+                background: $redDark;
+            }
+        }
+    }
+}
+
+@media  (max-width: 600px) {
+    .menu > div{
+        flex-direction: column;
+    }
+    .menuCard{
+        width: 100%;
+    }
+}
